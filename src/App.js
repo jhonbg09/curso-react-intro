@@ -1,13 +1,25 @@
-import logo from "./platzi.webp";
 import "./App.css";
+import TodoCounter from "./components/TodoCounter/TodoCounter";
+import TodoSearch from "./components/TodoSearch/TodoSearch";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
     <div className="App">
-      <TodoItem />
+      <TodoCounter />
+      <TodoSearch />
+
+      <TodoList>
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+      </TodoList>
+
+      {/* <CreateTodoButton /> */}
     </div>
   );
 }
+
 
 function TodoItem() {
   return (
