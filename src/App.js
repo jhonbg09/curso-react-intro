@@ -2,11 +2,13 @@ import "./App.css";
 import TodoCounter from "./components/TodoCounter/TodoCounter";
 import TodoSearch from "./components/TodoSearch/TodoSearch";
 import TodoList from "./components/TodoList/TodoList";
+import TodoItem from "./components/TodoItem/TodoItem";
+import CreateTodoButton from "./components/CreateTodoButton/CreateTodoButton";
 
 function App() {
   return (
     <div className="App">
-      <TodoCounter />
+      <TodoCounter completed={16} total={25}/>
       <TodoSearch />
 
       <TodoList>
@@ -15,19 +17,8 @@ function App() {
         <TodoItem />
       </TodoList>
 
-      {/* <CreateTodoButton /> */}
+      <CreateTodoButton />
     </div>
-  );
-}
-
-
-function TodoItem() {
-  return (
-    <li>
-      <span>v</span>
-      <p>Llorar con la llorona</p>
-      <span>X </span>
-    </li>
   );
 }
 
