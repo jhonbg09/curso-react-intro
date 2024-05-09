@@ -1,4 +1,4 @@
-import "./App.css";
+
 import TodoCounter from "./components/TodoCounter/TodoCounter";
 import TodoSearch from "./components/TodoSearch/TodoSearch";
 import TodoList from "./components/TodoList/TodoList";
@@ -9,7 +9,7 @@ const TodoDefault = [
   {
     id: 1,
     text: "tarea 1",
-    completed: false,
+    completed: true,
   },
 
   {
@@ -37,7 +37,7 @@ function App() {
       <TodoCounter completed={16} total={25} />
       <TodoSearch />
 
-      <TodoList>
+      <TodoList className='TodoList'>
         {TodoDefault.map((todo) => (
           <TodoItem key={todo.id} text={todo.text} completed={todo.completed} />
         ))}

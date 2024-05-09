@@ -1,12 +1,13 @@
+import './TodoItem.css'
 import React from 'react'
 
 function TodoItem({text, completed}) {
   return (
-    <li>
-    <span>v</span>
-    <p>{text} </p>
+    <li className='TodoItem'>
+    <span className={`Icon Icon-check ${completed && 'Icon-check--active'}`}>V</span>
+    <p className={`TodoItem-p TodoItem-p--complete`}>{text} </p>
 
-    <span>X </span>
+    <span className='Icon Icon-delete'>X</span>
   </li>
   )
 }
