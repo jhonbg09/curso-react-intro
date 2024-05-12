@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { useState } from 'react';
 import TodoCounter from "./components/TodoCounter/TodoCounter";
 import TodoSearch from "./components/TodoSearch/TodoSearch";
 import TodoList from "./components/TodoList/TodoList";
@@ -32,10 +33,14 @@ const TodoDefault = [
 ];
 
 function App() {
+  const[searchValue, setSearchValue ] = useState('')
   return (
     <div className="App">
       <TodoCounter completed={16} total={25} />
-      <TodoSearch />
+      <TodoSearch 
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
 
       <TodoList className='TodoList'>
         {TodoDefault.map((todo) => (
